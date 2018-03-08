@@ -1,4 +1,4 @@
-package com.xingen.slientinstalllib;
+package com.xingen.slientinstalllib.constants;
 
 import android.content.pm.PackageManager;
 

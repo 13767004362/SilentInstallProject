@@ -1,8 +1,11 @@
-package com.xingen.slientinstalllib;
+package com.xingen.slientinstalllib.observer;
 
 import android.content.pm.IPackageInstallObserver;
-import android.content.pm.PackageManager;
 import android.os.RemoteException;
+
+import com.xingen.slientinstalllib.constants.InstallConstants;
+import com.xingen.slientinstalllib.executor.MainExecutor;
+import com.xingen.slientinstalllib.listener.InstallResultListener;
 
 /**
  * Created by ${xinGen} on 2018/2/2.

@@ -1,4 +1,4 @@
-package com.xingen.slientinstalllib;
+package com.xingen.slientinstalllib.listener;
 
 /**
  * Created by ${xinGen} on 2018/2/2.
