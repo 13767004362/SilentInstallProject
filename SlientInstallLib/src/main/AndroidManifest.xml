@@ -1,2 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xingen.slientinstalllib" />
+    package="com.xingen.slientinstalllib" >
+     <!-- 系统静默安装权限-->
+     <uses-permission android:name="android.permission.INSTALL_PACKAGES"></uses-permission>
+</manifest>
