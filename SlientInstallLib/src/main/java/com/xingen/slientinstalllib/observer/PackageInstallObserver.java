@@ -27,20 +27,26 @@ public class PackageInstallObserver extends IPackageInstallObserver.Stub {
             return;
         }
         if (checkInstallSuccess(returnCode)) {
-            this.mainExecutor.execute(new Runnable() {
-                @Override
-                public void run() {
-                    installResultListener.installSuccess(packageName);
-                }
-            });
+               success(packageName);
         } else {
-            this.mainExecutor.execute(new Runnable() {
-                @Override
-                public void run() {
-                    installResultListener.installFailure(packageName);
-                }
-            });
+            failure(packageName);
         }
+    }
+    public  void success(final String packageName){
+        this.mainExecutor.execute(new Runnable() {
+            @Override
+            public void run() {
+                installResultListener.installSuccess(packageName);
+            }
+        });
+    }
+    public  void failure(final String packageName){
+        this.mainExecutor.execute(new Runnable() {
+            @Override
+            public void run() {
+                installResultListener.installFailure(packageName);
+            }
+        });
     }
 
     /**
