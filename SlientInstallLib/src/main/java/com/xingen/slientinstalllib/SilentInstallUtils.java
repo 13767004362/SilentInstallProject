@@ -50,6 +50,8 @@ public class SilentInstallUtils {
         if (installPackageMethod != null) {
             installPackageMethod.setAccessible(true);
             installPackageMethod.invoke(packageManager, packageURI, observer, flags, installerPackageName);
+        }else{
+            ( (PackageInstallObserver)observer).failure("PackageManager installPackage为空");
         }
     }
 

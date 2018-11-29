@@ -23,7 +23,7 @@ public class PackageInstallObserver extends IPackageInstallObserver.Stub {
     }
     @Override
     public void packageInstalled(final String packageName, int returnCode) throws RemoteException {
-        if (installResultListener != null) {
+        if (installResultListener == null) {
             return;
         }
         if (checkInstallSuccess(returnCode)) {
